@@ -1,310 +1,368 @@
 <!DOCTYPE html>
 <html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nabídka aut</title>
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="./icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./styl.css" rel="stylesheet" />
 
-  <title>Nabídka aut</title>
-  <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
-  <link href="./icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="./styl.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: #001f3f;
+        color: #ffffff;
+      }
 
-  <style>
-    body {
-      background-color: #001f3f;
-      color: #ffffff;
-    }
+      .navbar {
+        background-color: #001f3f;
+      }
 
-    .navbar {
-      background-color: #001f3f;
-    }
+      .breadcrumb-item.active {
+        color: #ffffff;
+      }
 
-    .breadcrumb-item.active {
-      color: #ffffff;
-    }
+      .breadcrumb-item a {
+        color: #007bff;
+      }
 
-    .breadcrumb-item a {
-      color: #007bff;
-    }
+      .breadcrumb-item a:hover {
+        color: #0056b3;
+      }
 
-    .breadcrumb-item a:hover {
-      color: #0056b3;
-    }
+      .nav-tabs .nav-link.active,
+      .nav-tabs .nav-item.show .nav-link {
+        background-color: #001f3f;
+        color: #ffffff;
+      }
 
-    .nav-tabs .nav-link.active,
-    .nav-tabs .nav-item.show .nav-link {
-      background-color: #001f3f;
-      color: #ffffff;
-    }
+      .nav-tabs .nav-link {
+        color: #007bff;
+      }
 
-    .nav-tabs .nav-link {
-      color: #007bff;
-    }
+      .nav-tabs .nav-link:hover {
+        color: #0056b3;
+      }
 
-    .nav-tabs .nav-link:hover {
-      color: #0056b3;
-    }
+      .modal-content {
+        background-color: #001f3f;
+        color: #ffffff;
+      }
 
-    .modal-content {
-      background-color: #001f3f;
-      color: #ffffff;
-    }
+      .modal-title {
+        color: #ffffff;
+      }
 
-    .modal-title {
-      color: #ffffff;
-    }
+      .modal-footer button {
+        color: #007bff;
+      }
 
-    .modal-footer button {
-      color: #007bff;
-    }
+      .modal-footer button:hover {
+        color: #0056b3;
+      }
 
-    .modal-footer button:hover {
-      color: #0056b3;
-    }
+      .carousel-caption {
+        background-color: rgba(0, 31, 63, 0.5);
+        color: #ffffff;
+      }
 
-    .carousel-caption {
-      background-color: rgba(0, 31, 63, 0.5);
-      color: #ffffff;
-    }
+      .breadcrumb {
+        background-color: transparent;
+      }
 
-    .breadcrumb {
-      background-color: transparent;
-    }
+      .breadcrumb-item a {
+        text-decoration: none;
+      }
 
-    .breadcrumb-item a {
-      text-decoration: none;
-    }
+      .card {
+        margin-bottom: 20px;
+      }
 
-    .card {
-      margin-bottom: 20px;
-    }
+      .card-img-top {
+        max-height: 200px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
 
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">AUTOBAZAR</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./form.html">
+                  <i class="bi bi-clock"></i>&nbsp;Formulář</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./table.html"><i class="bi bi-table"></i>&nbsp;Tabulka</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./datatable.html"
+                  ><i class="bi bi-clipboard-data"></i>&nbsp;Datatable</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./auta.html"
+                  ><i class="bi bi-book"></i>&nbsp;Nabídka aut</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    .card-img-top {
-      max-height: 200px; 
-      object-fit: cover; 
-    }
-  </style>
-</head>
+    <main>
+      <div class="mb-4 mt-5 pt-5 pb-3"></div>
 
-
-<body>
-  <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="./index.html">AUTOBAZAR</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link" href="./form.html">
-                <i class="bi bi-clock"></i>&nbsp;Formulář</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./table.html"><i class="bi bi-table"></i>&nbsp;Tabulka</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./datatable.html"><i class="bi bi-clipboard-data"></i>&nbsp;Datatable</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="./auta.html"><i class="bi bi-book"></i>&nbsp;Nabídka aut</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="mb-4 mt-5 pt-5 pb-3">
-    </div>
-
-    <div class="container">
-      <h3 class="text-light">Nabídka aut</h3>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            
-            <div class="card-body">
-              <h5 class="card-title">Škoda Octavia 3 RS</h5>
-              <img src="./photos/modal1.png" class="card-img-top" alt="Car 1">
-              
+        <h3 class="text-light">Nabídka aut</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Škoda Octavia 3 RS</h5>
+                <img src="./photos/modal1.png" class="card-img-top" alt="Car 1" />
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#carModal1"
+              >
+                Detail auta
+              </button>
             </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carModal1">
-              Detail auta
-            </button>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            
-            <div class="card-body">
-              <h5 class="card-title">Škoda Octavia 3 RS</h5>
-              <img src="./photos/modal2.png" class="card-img-top" alt="Car 1">
-              
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">VW golf IV</h5>
+                <img src="./photos/modal2.png" class="card-img-top" alt="Car 1" />
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#carModal1"
+              >
+                Detail auta
+              </button>
             </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carModal1">
-              Detail auta
-            </button>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            
-            <div class="card-body">
-              <h5 class="card-title">Škoda Octavia 3 RS</h5>
-              <img src="./photos/modal3.png" class="card-img-top" alt="Car 1">
-              
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">TOYOTA Supra MK1</h5>
+                <img src="./photos/modal3.png" class="card-img-top" alt="Car 1" />
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#carModal1"
+              >
+                Detail auta
+              </button>
             </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carModal1">
-              Detail auta
-            </button>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            
-            <div class="card-body">
-              <h5 class="card-title">Škoda Octavia 3 RS</h5>
-              <img src="./photos/modal4.png" class="card-img-top" alt="Car 1">
-              
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">NISSAN SKYLINE R34</h5>
+                <img src="./photos/modal4.png" class="card-img-top" alt="Car 1" />
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#carModal1"
+              >
+                Detail auta
+              </button>
             </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carModal1">
-              Detail auta
-            </button>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            
-            <div class="card-body">
-              <h5 class="card-title">Škoda Octavia 3 RS</h5>
-              <img src="./photos/modal5.png" class="card-img-top" alt="Car 1">
-              
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">NISSAN SILVIA S14</h5>
+                <img src="./photos/modal5.png" class="card-img-top" alt="Car 1" />
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#carModal1"
+              >
+                Detail auta
+              </button>
             </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carModal1">
-              Detail auta
-            </button>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            
-            <div class="card-body">
-              <h5 class="card-title">Škoda Octavia 3 RS</h5>
-              <img src="./photos/modal6.png" class="card-img-top" alt="Car 1">
-              
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">VW ARTEON</h5>
+                <img src="./photos/modal6.png" class="card-img-top" alt="Car 1" />
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#carModal1"
+              >
+                Detail auta
+              </button>
             </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carModal1">
-              Detail auta
-            </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Modal 1 -->
-    <div class="modal fade" id="carModal1" tabindex="-1" aria-labelledby="carModal1Label" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="carModal1Label">Detail auta - Car 1</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="col-md-4">
-              <div class="card ">
-                <div class="row">
-                <div class="card-body">
-                  
-                  <img src="./photos/modal1.png" class="card-img-top" alt="Car 1">
-                  
+      <!-- Modal 1 -->
+      <div
+        class="modal fade"
+        id="carModal1"
+        tabindex="-1"
+        aria-labelledby="carModal1Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="carModal1Label">Detail auta - Car 1</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="row">
+                    <div class="card-body">
+                      <img src="./photos/modal1.png" class="card-img-top" alt="Car 1" />
+                    </div>
+                  </div>
                 </div>
-              
               </div>
-              </div>
-            </div>
-            <p>Motor: 1.9 tdi</p>
+              <p>Motor: 1.9 tdi</p>
               <p>Cena: 500 000 Kč</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Zavřít</button>
-            <button type="button" class="btn btn-dark">Koupit</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 2 -->
-    <div class="modal fade" id="carModal2" tabindex="-1" aria-labelledby="carModal2Label" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="carModal2Label">Detail auta - Car 2</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>Detailní informace o Car 2.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zavřít</button>
-            <button type="button" class="btn btn-primary">Koupit</button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Zavřít</button>
+              <button type="button" class="btn btn-dark">Koupit</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Modal 3 -->
-    <div class="modal fade" id="carModal3" tabindex="-1" aria-labelledby="carModal3Label" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="carModal3Label">Detail auta - Car 3</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>Detailní informace o Car 3.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zavřít</button>
-            <button type="button" class="btn btn-primary">Koupit</button>
+      <!-- Modal 2 -->
+      <div
+        class="modal fade"
+        id="carModal2"
+        tabindex="-1"
+        aria-labelledby="carModal2Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="carModal2Label">Detail auta - Car 2</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Detailní informace o Car 2.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Zavřít
+              </button>
+              <button type="button" class="btn btn-primary">Koupit</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-  </main>
-
-  <footer class="bg-dark text-center py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-1 ">
-          <h5 class="mt-4 text-light">Sledujte nás</h5>
-          <a href="#" style="color: #007bff;">Facebook</a>
-          <a href="#" style="color: #007bff;">Twitter</a>
-          <a href="#" style="color: #007bff;">LinkedIn</a>
-        </div>
-        <div class="col">
-          <h5 class="mt-4 text-light">Navigace a kontakty</h5>
-          <a href="#" style="color: #007bff;">Domov</a>
-          <a href="#" style="color: #007bff;">O nás</a>
-          <a href="#" style="color: #007bff;">Kontakt</a>
-        </div>
-        <div class="col-md-1">
-          <h5 class="mt-4 text-light">Zákaznický servis</h5>
-          <a href="#" style="color: #007bff;">Zákaznický servis</a>
-          <a href="#" style="color: #007bff;">FAQ</a>
-          <a href="#" style="color: #007bff;">Vyhledávání</a>
+      <!-- Modal 3 -->
+      <div
+        class="modal fade"
+        id="carModal3"
+        tabindex="-1"
+        aria-labelledby="carModal3Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="carModal3Label">Detail auta - Car 3</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Detailní informace o Car 3.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Zavřít
+              </button>
+              <button type="button" class="btn btn-primary">Koupit</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </main>
 
-  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <footer class="bg-dark text-center py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1">
+            <h5 class="mt-4 text-light">Sledujte nás</h5>
+            <a href="#" style="color: #007bff">Facebook</a>
+            <a href="#" style="color: #007bff">Twitter</a>
+            <a href="#" style="color: #007bff">LinkedIn</a>
+          </div>
+          <div class="col">
+            <h5 class="mt-4 text-light">Navigace a kontakty</h5>
+            <a href="#" style="color: #007bff">Domov</a>
+            <a href="#" style="color: #007bff">O nás</a>
+            <a href="#" style="color: #007bff">Kontakt</a>
+          </div>
+          <div class="col-md-1">
+            <h5 class="mt-4 text-light">Zákaznický servis</h5>
+            <a href="#" style="color: #007bff">Zákaznický servis</a>
+            <a href="#" style="color: #007bff">FAQ</a>
+            <a href="#" style="color: #007bff">Vyhledávání</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-</body>
-
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
